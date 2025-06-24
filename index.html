@@ -14,83 +14,76 @@
 <body>
 
     <!-- NavBar -->
-     <nav class="navbar">
-    <div class="navbar-container">
-      <a href="#" class="logo">
-        <img src="https://raw.githubusercontent.com/Tariqsh123/theDistruptsLab/refs/heads/main/Images/Logo.png" alt="Logo" class="logo-img">
-      </a>
+    
+    <nav>
+  <div class="logo-container">
+    <img src="https://raw.githubusercontent.com/Tariqsh123/theDistruptsLab/refs/heads/main/Images/Logo.png" alt="Logo">
+  </div>
 
-      <div class="menu-toggle" id="mobile-menu">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-      </div>
+  <div class="hamburger" onclick="toggleMenu()">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
 
-      <ul class="nav-links">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Solutions</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Careers</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-    </div>
-  </nav>
+  <div class="nav-links" id="navLinks">
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Contact</a>
+  </div>
+</nav>
+
 <script>
-    const mobileMenu = document.getElementById('mobile-menu');
-const navLinks = document.querySelector('.nav-links');
-
-mobileMenu.addEventListener('click', () => {
-  navLinks.classList.toggle('active');
-});
+function toggleMenu() {
+  document.getElementById('navLinks').classList.toggle('active');
+}
 </script>
+
+
+
 <!-- Navbar end -->
 
 <!-- Hero Section -->
-  <header class="hero">
-    <div class="hero-overlay">
-      <div class="hero-content">
-        <p class="welcome-text">Welcome</p>
-        <h1 class="animated-text">Computer Vision AI for Industrial Safety</h1>
-        <p class="hero-sub">
-          Upgrade Your Existing CCTV Infrastructure With Artificial Intelligence For Proactive Industrial Safety.
-        </p>
-        <a href="#" class="hero-btn">Contact Today</a>
-      </div>
-    </div>
-  </header>
-  <script>
-    const animatedText = document.querySelector(".animated-text");
-const phrases = ["Computer Vision AI for Safer Workplaces"];
-let currentPhraseIndex = 0;
-let charIndex = 0;
-let isDeleting = false;
+<div id="hero-section">
+  <div id="particles-js"></div>
+  <div class="overlay"></div>
+  <div class="hero-content">
+    <h1>Unboxed AI</h1>
+    <p>Explore the World of Artificial Intelligence Through Interactive Learning</p>
+    <a href="#" class="cta-button">Start Learning</a>
+  </div>
+</div>
+<!-- Load particles.js -->
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
 
-function typeEffect() {
-  const currentPhrase = phrases[currentPhraseIndex];
-  const displayedText = currentPhrase.substring(0, charIndex);
-  animatedText.textContent = displayedText;
-
-  if (!isDeleting) {
-    if (charIndex < currentPhrase.length) {
-      charIndex++;
-      setTimeout(typeEffect, 100);
-    } else {
-      isDeleting = true;
-      setTimeout(typeEffect, 2000);
+<!-- Initialize particles -->
+<script>
+particlesJS("particles-js", {
+  "particles": {
+    "number": { "value": 80 },
+    "color": { "value": "#ffffff" },
+    "shape": { "type": "circle" },
+    "opacity": { "value": 0.5 },
+    "size": { "value": 3 },
+    "line_linked": {
+      "enable": true,
+      "distance": 150,
+      "color": "#ffffff",
+      "opacity": 0.4,
+      "width": 1
+    },
+    "move": { "enable": true, "speed": 3 }
+  },
+  "interactivity": {
+    "events": {
+      "onhover": { "enable": true, "mode": "repulse" }
     }
-  } else {
-    if (charIndex > 0) {
-      charIndex--;
-      setTimeout(typeEffect, 50);
-    } else {
-      isDeleting = false;
-      setTimeout(typeEffect, 500);
-    }
-  }
-}
+  },
+  "retina_detect": true
+});
+</script>
 
-typeEffect();
-  </script>
 <!-- Hero Section -->
 
 <!-- Logo Carousel Section -->

@@ -9,180 +9,200 @@ body {
 }
 
 /* NavBar */
-.navbar {
-  background: whitesmoke;
-  color: white;
-  padding: 1rem 2rem;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
+/* HEADER */
 
-.navbar-container {
+    nav {
+      background-color: #000;
+      color: #ffffff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: fixed;
+      height: 60px;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      border-bottom: 1px solid white;
+    }
+
+ .logo-container {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.logo-img {
-  height: 40px;
-  width: auto;
-  display: block;
-}
-
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 2rem;
-}
-
-.nav-links li a {
-  text-decoration: none;
-  color: black;
-  transition: color 0.3s ease;
-}
-
-.nav-links li a:hover {
-  color: #c91a17;
-  color: #9e0300;
-}
-
-.menu-toggle {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-  gap: 5px;
-}
-
-.menu-toggle .bar {
-  width: 25px;
-  height: 3px;
-  background-color: black;
-  transition: all 0.3s ease;
-}
-
-/* Mobile styles */
-@media (max-width: 768px) {
-  .menu-toggle {
-    display: flex;
-  }
-
-  .nav-links {
-    position: absolute;
-    top: 70px;
-    left: 0;
-    right: 0;
-    background: #fff;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-    padding: 1rem 0;
-    display: none;
-  }
-
-  .nav-links.active {
-    display: flex;
-  }
-}
-
-/* Hero section */
-/* Hero Section */
-.hero {
-  height: 600px;
-  background: url('https://thedisruptlabs.com/wp-content/uploads/2024/06/disrupt-labs-main.jpg') no-repeat center center/cover;
-  width: 100%;
-  display: flex;
   justify-content: center;
-  align-items: center;
+  background-color: white;
+  z-index: 1;
+  height: 70px;
+  width: 250px;
+  clip-path: polygon(0 0, 100% 0, 90% 100%, 0% 100%);
 }
-.hero-overlay {
-    display: flex;
-    justify-content: left;
-    flex-direction: column;
-    height: fit-content;
-    gap: 20px;
-    width: 90%;
-    max-width: 1200px;
-}
-.hero-content{
-    display: flex;
-    justify-content: left;
-    flex-direction: column;
-    height: fit-content;
-    gap: 10px;
-    width: 90%;
-    max-width: 1200px;
-}
-.welcome-text {
-  font-size: 25px;
-  color: #fff;
-  font-weight: 600;
-}
-.animated-text {
-  font-size: 50px;
-  font-weight: 700;
-  color: #fff;
-  width: 600px;
-  height: 150px;
-}
-.hero-sub {
-  font-size: medium;
-  color: white;
-  font-weight: 600;
-  width: 400px;
-  height: fit-content;
-}
-.hero-btn {
-    height: fit-content;
-    width: fit-content;
-    padding: 10px 30px;
-    font-size: large;
-    color: white;
-    border-radius: 20px;
-    text-decoration: none;
-    transition: all 0.2s;
-    background-color: #c91a17;
-}
-.hero-btn:hover {
-  background: #9e0300;
-}
-@media (max-width: 991px) {
-.hero {
-    height: 450px;
-}
-}
-
-@media (max-width: 768px) {
-.welcome-text {
-    font-size: 20px;
-}
-
-.animated-text {
-    font-size: 40px;
-    height: 120px;
-    width: 100%;
-}
-}
-@media (max-width: 600px) {
-    .hero {
-    height: 400px;
-}
-        .welcome-text {
-        font-size: 15px;
+    .logo-container img {
+      height: 55px;
+      width: auto;
     }
-    .animated-text {
-        font-size: 30px;
+
+
+    .nav-links {
+      display: flex;
+      height: 100%;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      height: 100%;
+      width: fit-content;
+      color: #ffffff;
+      display: flex;
+      justify-content: center;
+      background-color: #000;
+      align-items: center;
+      width: 100px;
+      transition: all 0.3s;
+      font-size: 16px;
+    }
+
+    .nav-links a:hover {
+      background-color: #c91a17;
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .hamburger div {
+      width: 25px;
+      height: 3px;
+      background-color: #ffffff;
+      margin: 4px 0;
+      border-radius: 2px;
+    }
+    @media (max-width: 768px) {
+        nav {
+            padding-right: 20px;
+        }
+      .nav-links {
+        position: absolute;
+        top: 60px;
+        border-top: 1px solid white;
+        left: 0;
+        background-color: #000;
         width: 100%;
-        height: 100px;
+        flex-direction: column;
+        align-items: center;
+        /* display: none; */
+        height: fit-content;
+        /* Animation setup */
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: max-height 0.4s ease, opacity 0.4s ease, transform 0.4s ease;
+        
+      }
+      .nav-links.active {
+    max-height: 300px; /* enough for all links */
+    opacity: 1;
+    transform: translateY(0);
+      }
+      .nav-links a {
+        height: 50px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .hamburger {
+        display: flex;
+      }
     }
-    .hero-sub {
-    font-size: small;
-    width: 100%;
-    }
+
+
+/* Hero Section */
+
+/* Hero Section */
+#hero-section {
+  position: relative;
+  height: 600px;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  background: #000; /* fallback color */
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: white;
+  padding: 0 20px;
+}
+
+.hero-content h1 {
+  font-size: 4rem;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: auto auto 20px auto;
+}
+
+.cta-button {
+  background-color: #c91a17;
+  color: white;
+  padding: 14px 36px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #a81515;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    #hero-section {
+    position: relative;
+    height: 500px;
+}
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  .cta-button {
+    padding: 12px 24px;
+  }
+}
 /* Logo Carousel  */
 .logo-carousel {
   width: 100%;
