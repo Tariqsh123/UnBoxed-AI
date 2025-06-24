@@ -45,7 +45,8 @@ body {
 }
 
 .nav-links li a:hover {
-  color: #00326b;
+  color: #c91a17;
+  color: #9e0300;
 }
 
 .menu-toggle {
@@ -73,7 +74,7 @@ body {
     top: 70px;
     left: 0;
     right: 0;
-    background: #000;
+    background: #fff;
     flex-direction: column;
     align-items: center;
     gap: 1rem;
@@ -142,10 +143,10 @@ body {
     border-radius: 20px;
     text-decoration: none;
     transition: all 0.2s;
-    background-color: #00326b;
+    background-color: #c91a17;
 }
 .hero-btn:hover {
-  background: #00244d;
+  background: #9e0300;
 }
 @media (max-width: 991px) {
 .hero {
@@ -224,6 +225,7 @@ body {
 #card-heading{
     height: fit-content;
     width: 100%;
+    background-color: black;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -234,14 +236,14 @@ body {
     width: 100%;
     text-align: center;
     font-size: 20px;
-    color: #00326b;
+    color: #fff;
 }
 #card-heading h2{
     width: 70%;
     text-align: center;
     font-size: 30px;
     max-width: 1200px;
-    color: #00244d;
+    color: #c91a17;
 }
 @media (max-width: 991px) {
 #card-heading{
@@ -272,8 +274,9 @@ body {
 .card-container {
     height: fit-content;
     width: 100%;
+    background-color: #000;
     display: flex;
-    margin: 30px 0;
+    padding: 30px 0;
     justify-content: center;
     align-items: center;
 
@@ -294,7 +297,6 @@ body {
   height: 350px;
   width: 320px;
   border-radius: 12px;
-  box-shadow: 0 4px 8px gray;
   text-align: center;
   gap: 30px;
   display: flex;
@@ -303,23 +305,14 @@ body {
   flex-direction: column;
   transition: background-color 0.5s ease, transform 0.4s ease;
 }
-
-.card:hover {
-  background-color: #00326b;
-}
-
 .card h3 {
-  color: #00326b;
+  color: #c91a17;
   width: 100%;
   height: fit-content;
   font-size: large;
   text-align: left;
   padding-left: 20px;
   transition: color 0.4s ease;
-}
-
-.card:hover h3 {
-  color: white;
 }
 
 .card-icon {
@@ -336,12 +329,12 @@ body {
   width: 60px;
   padding: 10px;
   border-radius: 50%;
-  background-color: #00244d;
+  background-color: #9e0300;
   object-fit: contain;
 }
 
 .card p {
-  color: #00244d;
+  color: #9e0300;
   width: 100%;
   height: fit-content;
   text-align: left;
@@ -350,14 +343,31 @@ body {
   transition: color 0.4s ease;
 }
 
-.card:hover p {
-  color: white;
+#card-inner-container .card:nth-child(2),
+#card-inner-container .card:nth-child(4),
+#card-inner-container .card:nth-child(6) {
+  background-color: #c91a17;
+}
+#card-inner-container .card:nth-child(2) h3,
+#card-inner-container .card:nth-child(4) h3,
+#card-inner-container .card:nth-child(6) h3 {
+    color: white;
+}
+#card-inner-container .card:nth-child(2) p,
+#card-inner-container .card:nth-child(4) p,
+#card-inner-container .card:nth-child(6) p {
+    color: white;
+}
+#card-inner-container .card:nth-child(2) img,
+#card-inner-container .card:nth-child(4) img,
+#card-inner-container .card:nth-child(6) img {
+    background-color: white;
 }
 
 /* Why Choose Us Section */
 .Why-Choose-Us-Section{
     height: 500px;
-    background: rgb(0, 119, 255,0.1);
+    background: white;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -383,21 +393,21 @@ body {
 }
 #why-choose-us-left h4{
     font-size: 20px;
-    color: #00326b;
+    color: #000;
     width: 100%;
     text-align: left;
     font-weight: 700;
 }
 #why-choose-us-left h2{
     font-size: 30px;
-    color: #00244d;
+    color: #9e0300;
     width: 100%;
     text-align: left;
     font-weight: 700;
 }
 #why-choose-us-left p{
     font-size: medium;
-    color: #00244d;
+    color: #000;
     width: 100%;
     text-align: left;
 }
@@ -410,14 +420,14 @@ body {
 #why-choose-us-left div button{
     font-size: medium;
     color: #fff;
-    background-color: #00326b;
+    background-color: #c91a17;
     border: none;
     transition: all 0.2s;
     border-radius: 20px;
     padding: 10px 20px;
 }
 #why-choose-us-left div button:hover{
-    background-color: #00244d;
+    background-color: #9e0300;
 }
 #why-choose-us-right{
     height: 100%;
@@ -444,11 +454,11 @@ body {
     align-items: center;
 }
 #why-choose-right-text-box-left h3{
-    color: #00326b;
+    color: #c91a17;
     font-size: 50px;
 }
 #why-choose-right-text-box-left h5{
-    color: #00326b;
+    color: #9e0300;
     font-size: 20px;
 }
 #why-choose-right-text-box-right{
@@ -458,9 +468,9 @@ body {
     flex-direction: column;
     padding-left: 10px;
     justify-content: center;
-    color: #00326b;
+    color: #000;
     align-items: center;
-    border-left: 1px solid #00244d;
+    border-left: 1px solid #000;
 }
 @media (max-width: 991px) {
     .Why-Choose-Us-Section {
@@ -509,6 +519,7 @@ body {
     width: 100%;
     display: flex;
     flex-direction: column;
+    background-color: #000;
     justify-content: center;
     align-items: center;
     padding: 20px 0;
@@ -516,19 +527,19 @@ body {
 }
 #real-time-text-section-main-container h6{
     font-size: medium;
-    color: #00326b;
+    color: #fff;
     text-align: center;
     width: 100%;
 }
 #real-time-text-section-main-container h4{
     font-size: 35px;
-    color: #00326b;
+    color: #c91a17;
     text-align: center;
     width: 100%;
 }
 #real-time-text-section-main-container p{
     font-size: small;
-    color: #00326b;
+    color: #fff;
     text-align: center;
     max-width: 1200px;
     width: 70%;
@@ -551,6 +562,7 @@ body {
     width: 100%;
     display: flex;
     justify-content: center;
+    background-color: #000;
     flex-wrap: wrap;
     align-items: center;
 }
@@ -572,11 +584,13 @@ body {
 #real-time-section-image-2-and-3-container{
     height: fit-content;
     width: 100%;
+    background-color: #000;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     gap: 40px;
+    padding: 30px 0;
 }
 #real-time-section-image-2-and-3-container img{
     height: auto;
@@ -591,7 +605,7 @@ body {
 @media (max-width: 768px){
 #real-time-section-image-2-and-3-container{
     flex-direction: column;
-    gap: 0px;
+    gap: 20px;
 }
 #real-time-section-image-2-and-3-container img{
     width: 100%;
@@ -611,18 +625,18 @@ body {
 }
 #step-to-follow-text-container h6{
     text-align: center;
-    color: #00326b;
+    color: #000;
     font-size: 15px;
 }
 #step-to-follow-text-container h3{
     text-align: center;
-    color: #00326b;
+    color: #c91a17;
     font-size: 30px;
 }
 
 #step-to-follow-text-container p{
     text-align: center;
-    color: #00326b;
+    color: #000;
     font-size: small;
 }
 
@@ -662,32 +676,28 @@ body {
     border-radius: 20px;
     gap: 10px;
     box-shadow: 1px 1px 5px gray;
+    background-color: #000;
     flex-direction: column;
     transition: all 0.3s;
     justify-content: center;
     align-items: center;
 }
-#step-to-follow-inner-box:hover{
-    background-color:rgb(0, 119, 255,0.1);
-
+.step-to-follow-inner-box-2 {
+    background-color: #c91a17 !important;
 }
 #step-to-follow-inner-box h6{
     width: 100%;
     text-align: left;
     padding-left: 20px;
     font-size: large;
-    color: gray;
-}
-#step-to-follow-inner-box:hover h6,
-#step-to-follow-inner-box:hover p {
-  color: #00326b;
+    color: white;
 }
 #step-to-follow-inner-box p{
     width: 100%;
     text-align: left;
     padding-left: 20px;
     font-size: small;
-    color: gray;
+    color: white;
 }
 #step-to-follow-box img{
     height: 80px;
@@ -720,7 +730,7 @@ body {
     width: 95%;
     max-width: 1000px;
     align-items: center;
-    background: #00326b;
+    background: #c91a17;
     border-radius: 20px;
 }
 #book-a-call-inner-left{
@@ -756,8 +766,14 @@ body {
     padding: 10px 20px;
     border: none;
     border-radius: 20px;
-    color: #00326b;
+    border: 2px solid black;
+    color: black;
+    transition: all 0.3s;
     background-color: #fff;
+}
+#book-a-call-inner-left button:hover{
+    color: white;
+    background-color: #000;
 }
 #book-a-call-inner-right{
     height: 100%;
@@ -812,41 +828,39 @@ width: 100%;
 
 /* Footer */
 footer{
-    height: 200px;
+    height: fit-content;
     width: 100%;
     display: flex;
+    padding-top: 10px;
     justify-content: center;
+    background-color: #000;
     align-items: center;
 }
 #footer-inner-container{
     height: 100%;
     width: 100%;
     max-width: 1200px;
-    border-top: 1px solid gainsboro;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
 }
 #footer-left{
     height: 100%;
-    width: 300px;
+    width: 250px;
     display: flex;
     gap: 30px;
-    justify-content: center;
-    align-items: center;
+    justify-content: left;
     padding-left: 20px;
     flex-direction: column;
 }
-#footer-left h2{
-    font-size: 30px;
-    color: #00326b;
-    text-align: left;
-    width: 100%;
-    font-weight: 900;
+#footer-left img{
+    height: 100px;
+    width: auto;
+    object-fit: contain;
 }
 #footer-left p{
    font-size: small;
-    color: #00326b;
+    color: white;
     text-align: left;
     width: 100%;
 }
@@ -860,14 +874,14 @@ footer{
 #social-icon-container a{
     height: 30px;
     width: 30px;
-    background-color: #00326b;
+    background-color: #c91a17;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 #social-icon-container a:hover{
-    background-color: #00244d;
+    background-color: #9e0300;
 }
 #social-icon-container a img{
     height: 50%;
@@ -878,7 +892,7 @@ footer{
     height: 100%;
     width: 200px;
     display: flex;
-    gap: 30px;
+    gap: 20px;
     justify-content: center;
     align-items: center;
     padding-left: 20px;
@@ -886,7 +900,7 @@ footer{
 }
 #footer-mid h6{
     font-size: 20px;
-    color: #00326b;
+    color: #c91a17;
     width: 100%;
     font-weight: 600;
     text-align: left;
@@ -902,19 +916,20 @@ footer{
 }
 #footer-mid ul li{
     width: 100%;
+    font-weight: 600;
     text-align: left;
     font-size: small;
     cursor: pointer;
-    color: #00326b;
+    color: white;
 }
 #footer-mid ul li:hover{
-    color: #00244d;
+    color: #c91a17;
 }
 #footer-right{
     height: 100%;
     width: 300px;
     display: flex;
-    gap: 30px;
+    gap: 20px;
     justify-content: center;
     align-items: center;
     padding-left: 20px;
@@ -922,14 +937,14 @@ footer{
 }
 #footer-right h6{
     font-size: 20px;
-    color: #00326b;
+    color: #c91a17;
     width: 100%;
     text-align: left;
     font-weight: 600;
 }
 #footer-right p{
     font-size: small;
-    color: #00326b;
+    color: white;
     width: 100%;
     text-align: left;
 }
