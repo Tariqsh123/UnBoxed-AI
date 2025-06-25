@@ -841,6 +841,13 @@ nav {
   width: auto;
   object-fit: contain;
 }
+@media (max-width: 768px) {
+#real-time-section-image-1-container img {
+  height: auto;
+  width: 95%;
+  object-fit: contain;
+}
+}
 @media (max-width: 600px) {
   #real-time-section-image-1-container {
     height: fit-content;
@@ -878,7 +885,7 @@ nav {
     gap: 20px;
   }
   #real-time-section-image-2-and-3-container img {
-    width: 100%;
+    width: 95%;
   }
 }
 
@@ -1222,10 +1229,23 @@ footer {
 #footer-right p {
   font-size: medium;
   color: white;
+  height: 40px;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  gap: 10px;
   width: 100%;
   text-align: left;
 }
+#footer-right p img{
+  height: 30px;
+  width: auto;
+  object-fit: contain;
+}
 #footer-right p span {
+  color: #fff;
+}
+#footer-right p span:hover{
   color: #c91a17;
 }
 @media (max-width: 768px) {
@@ -1235,6 +1255,7 @@ footer {
   }
   #footer-inner-container {
     flex-direction: column;
+    gap: 20px;
   }
   #footer-left {
     height: fit-content;
