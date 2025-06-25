@@ -32,6 +32,7 @@ body {
   background-color: white;
   z-index: 1;
   height: 70px;
+
   width: 250px;
   clip-path: polygon(0 0, 100% 0, 90% 100%, 0% 100%);
 }
@@ -1176,18 +1177,20 @@ footer{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 05px;
+    gap: 10px;
     list-style: none;
 }
-#footer-mid ul li{
+#footer-mid ul a{
     width: 100%;
     font-weight: 600;
     text-align: left;
-    font-size: small;
+    font-size: medium;
     cursor: pointer;
     color: white;
+    text-decoration: none;
 }
-#footer-mid ul li:hover{
+
+#footer-mid ul a:hover{
     color: #c91a17;
 }
 #footer-right{
@@ -1208,15 +1211,18 @@ footer{
     font-weight: 600;
 }
 #footer-right p{
-    font-size: small;
+    font-size: medium;
     color: white;
     width: 100%;
     text-align: left;
 }
+#footer-right p span{
+    color: #c91a17;
+}
 @media (max-width: 768px) {
 footer {
     height: fit-content;
-    margin-bottom: 10px;
+    padding-bottom: 10px;
 }
     #footer-inner-container {
     flex-direction: column;}
